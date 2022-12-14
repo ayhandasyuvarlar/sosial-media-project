@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Sosial-Media
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Material UI: https://mui.com/material-ui/getting-s...
+- Redux Toolkit: https://redux-toolkit.js.org/introduc...
+- React Router: https://reactrouter.com/en/v6.3.0/get...
+- Redux Persist: https://github.com/rt2zz/redux-persist
+- React Dropzone: https://react-dropzone.js.org/
+- Node: https://nodejs.org/en/download/
+- NPX: https://www.npmjs.com/package/npx
+- Google Fonts: https://fonts.google.com/
+- Formik: https://formik.org/docs/overview
+- Yup: https://github.com/jquense/yup
 
-## Available Scripts
+## Redux Persist 
 
-In the project directory, you can run:
+### Redux kullandığımız uygulamalarda, sayfa değiştiğinde, yenilendiğinde veya uygulama kapatıp tekrar açıldığında, redux’ taki değişkenlerin tekrar eski haline dönmesi veya sıfırlanması sebebiyle tekrar kullanmak istediğimizde ulaşamayız. Bu yüzden sayfa yenilendiğinde tekrar istek atar ve değişkenleri tekrar setleriz. Özellikle genelde servisten gelen sabit objeler veya arraylerde bu can sıkıcı hale gelir çünkü tekrar servise istek atıp değişkeni tekrar setlemek gerekir.
 
-### `npm start`
+### Redux persist, redux’taki değişkenlerin, sayfa yenilendiğinde, değiştiğinde veya uygulama kapatıp tekrar açıldığında tekrar eski haline dönmesini veya sıfırlanmasını engellemeye yarayan, bu değişkenleri localstorage da saklayan bir pakettir.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Bir örnekle anlatmak gerekirse; Login sayfamızı reducera yazdığımız loginState adında boolean bir değişkene bağladığımızı düşünelim.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## redux persist Bu değişken true olduğunda login sayfası, eğer false ise dashboard sayfası gözükecektir.
 
-### `npm test`
+### Redux persist kullanmadığımızda sayfa her yenilendiğinde reducer sıfırlanacak, loginState eski haline dönecek yani true olacak ve login sayfası tekrar gözükecektir. Daha önceden login olduğumuz halde tekrar login ekranı önümüze gelecektir.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Ancak redux persist kullanıldığında böyle bir durum yaşanmayacak loginState i true ya setlemediğimiz sürece login sayfası gözükmeyecektir.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
